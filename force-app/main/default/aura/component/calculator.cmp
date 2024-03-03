@@ -1,34 +1,37 @@
 <aura:component>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <aura:attribute name="display" type="String" default=""/>
     <div class="calculator"> 
-        <table>
+        <div class="display">
+            {!v.display}
+        </div>
+        <div class="buttons">
+            <table>
+                <tr>
+                    <td><lightning:button label="1" class="calculator-button" onclick="{!c.addToDisplay}" value="1"/></td>
+                    <td><lightning:button label="2" class="calculator-button" onclick="{!c.addToDisplay}" value="2"/></td>
+                    <td><lightning:button label="3" class="calculator-button" onclick="{!c.addToDisplay}" value="3"/></td>
+                    <td><lightning:button label="+" class="special-button" onclick="{!c.addToDisplay}" value="+"/></td>
+                </tr>
             <tr>
-                <td>{!v.display}</td>
+                <td><lightning:button label="4" class="calculator-button" onclick="{!c.addToDisplay}" value="4"/></td>
+                <td><lightning:button label="5" class="calculator-button" onclick="{!c.addToDisplay}" value="5"/></td>
+                <td><lightning:button label="6" class="calculator-button" onclick="{!c.addToDisplay}" value="6"/></td>
+                <td><lightning:button label="-" class="special-button" onclick="{!c.addToDisplay}" value="-"/></td>
             </tr>
             <tr>
-                <td><lightning:button label="1" onclick="{!c.addToDisplay}" value="1"/></td>
-                <td><lightning:button label="2" onclick="{!c.addToDisplay}" value="2"/></td>
-                <td><lightning:button label="3" onclick="{!c.addToDisplay}" value="3"/></td>
-                <td><lightning:button label="+" onclick="{!c.addToDisplay}" value="+"/></td>
+                <td><lightning:button label="7" class="calculator-button" onclick="{!c.addToDisplay}" value="7"/></td>
+                <td><lightning:button label="8" class="calculator-button" onclick="{!c.addToDisplay}" value="8"/></td>
+                <td><lightning:button label="9" class="calculator-button" onclick="{!c.addToDisplay}" value="9"/></td>
+                <td><lightning:button label="*" class="special-button" onclick="{!c.addToDisplay}" value="*"/></td>
             </tr>
             <tr>
-                <td><lightning:button label="4" onclick="{!c.addToDisplay}" value="4"/></td>
-                <td><lightning:button label="5" onclick="{!c.addToDisplay}" value="5"/></td>
-                <td><lightning:button label="6" onclick="{!c.addToDisplay}" value="6"/></td>
-                <td><lightning:button label="-" onclick="{!c.addToDisplay}" value="-"/></td>
-            </tr>
-            <tr>
-                <td><lightning:button label="7" onclick="{!c.addToDisplay}" value="7"/></td>
-                <td><lightning:button label="8" onclick="{!c.addToDisplay}" value="8"/></td>
-                <td><lightning:button label="9" onclick="{!c.addToDisplay}" value="9"/></td>
-                <td><lightning:button label="*" onclick="{!c.addToDisplay}" value="*"/></td>
-            </tr>
-            <tr>
-                <td><lightning:button label="C" onclick="{!c.clearDisplay}"/></td>
-                <td><lightning:button label="0" onclick="{!c.addToDisplay}" value="0"/></td>
-                <td><lightning:button label="=" onclick="{!c.calculateResult}"/></td>
-                <td><lightning:button label="/" onclick="{!c.addToDisplay}" value="/"/></td>
+                <td><lightning:button label="C" class="calculator-button" onclick="{!c.clearDisplay}"/></td>
+                <td><lightning:button label="0" class="calculator-button" onclick="{!c.addToDisplay}" value="0"/></td>
+                <td><lightning:button label="=" class="special-button" onclick="{!c.calculateResult}"/></td>
+                <td><lightning:button label="/" class="special-button" onclick="{!c.addToDisplay}" value="/"/></td>
             </tr>
         </table>
+    </div>
     </div>
 </aura:component>

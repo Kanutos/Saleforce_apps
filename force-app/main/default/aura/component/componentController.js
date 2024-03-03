@@ -1,4 +1,14 @@
 ({
+    doInit: function(component, event, helper) {
+        var cssURL = "{! $Resource.calculatorStyles }";
+        var head = document.getElementsByTagName('head')[0];
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = cssURL;
+        head.appendChild(link);
+    },
+
     addToDisplay : function(component, event, helper) {
         var clickedButton = event.getSource().get("v.value");
         var currentDisplay = component.get("v.display");

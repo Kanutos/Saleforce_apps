@@ -1,0 +1,42 @@
+.THIS .calculator {
+    font-family: Arial, sans-serif; /* Fuente para la calculadora */
+    background-color: #F5F5F5; /* Color de fondo de la calculadora */
+    border-radius: 5px; /* Bordes redondeados para la calculadora */
+    padding: 20px; /* Espaciado interno para la calculadora */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.THIS .calculator table {
+    width: 100%; /* Ancho completo para la tabla */
+}
+
+.THIS .calculator table td {
+    padding: 10px; /* Espaciado interno para las celdas */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+.THIS .calculator .calculator-button {
+    font-size: 24px; /* Tamaño de la letra para los botones */
+    width: 100px; /* Ancho de los botones */
+    height: 100px; /* Altura de los botones */
+    background-color: #ab1b1b; /* Color de fondo de los botones */
+    border: 1px solid #cccccc; /* Borde de los botones */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima de los botones */
+}
+
+.THIS .calculator .special-button {
+    font-size: 24px; /* Tamaño de la letra para los botones especiales */
+    width: 100px; /* Ancho de los botones especiales */
+    height: 100px; /* Altura de los botones especiales */
+    background-color: #dfbeb2; /* Color de fondo de los botones especiales */
+    border: 1px solid #81C784; /* Borde de los botones especiales */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima de los botones especiales */
+}
+
+.THIS .calculator .display-text {
+    font-size: 36px; /* Tamaño de la letra para el texto de la pantalla */
+    color: green; /* Color del texto de la pantalla */
+    margin-bottom: 20px; /* Margen inferior para separar la pantalla de los botones */
+}
